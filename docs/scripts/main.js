@@ -1,9 +1,15 @@
+function getTimestamp() {
+    let iso = new Date().toISOString();
+    let str = iso.replace(/[T:-]/g, "");
+    return str.replace(/\..*/, "");
+}
+
 function gdjournal() {
-    const text = "これはサンプルテキストです。";
-    const blob = new Blob([text], { type: 'text/plain' });
-    const link = document.createElement('a');
+    const text = document.getElementById("textarea").value;
+    const blob = new Blob([text], {type: "text/plain"});
+    const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = 'sample.txt';
+    link.download = getTimestamp() + ".txt";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
