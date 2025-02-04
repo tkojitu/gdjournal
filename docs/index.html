@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        #download_button {
+            font-size: 200%;
+        }
+        #textarea {
+            font-size: 200%;
+            width: 95%;
+            height: 640px;
+        }
+    </style>
     <head>
         <meta charset="UTF-8">
         <script src="./scripts/main.js"></script>
     </head>
     <body id="body">
-        <button onclick="gdjournal()">Download</button>
+        <button onclick="gdjournal()" id="download_button">Download</button>
     </body>
-    <p><textarea id="textarea" cols="80" rows="25"></textarea></p>
+    <p><textarea id="textarea"></textarea></p>
 </html>
