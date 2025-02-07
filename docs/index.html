@@ -2,21 +2,48 @@
 <html>
     <head>
         <style>
+            #control_panel {
+                display: flex;
+            }
+            #left_panel {
+                width: 50%;
+                text-align: left;
+            }
+            #right_panel {
+                width: 50%;
+                text-align: right;
+            }
             #download_button {
-                font-size: 200%;
+                font-size: 250%;
+            }
+            #clear_button {
+                font-size: 250%;
             }
             #textarea {
-                font-size: 200%;
+                font-size: 150%;
                 width: 95%;
                 height: 960px;
                 overflow: scroll;
+            }
+            .flex {
+                display: flex;
+            }
+            .right {
+                width: 50%;
+                text-align: right;
+            }
+            .left {
+                width: calc(100% - 55%);
             }
         </style>
         <meta charset="UTF-8">
         <script src="./scripts/main.js"></script>
     </head>
     <body id="body">
-        <button onclick="gdjournal()" id="download_button">Download</button>
+        <div class="flex">
+            <div class="left"><button onclick="gdjournal()" id="download_button">Download</button></div>
+            <div class="right"><button onclick="clearTextarea()" id="clear_button">Clear</button></div>
+        </div>
+        <p><textarea id="textarea"></textarea></p>
     </body>
-    <p><textarea id="textarea"></textarea></p>
 </html>

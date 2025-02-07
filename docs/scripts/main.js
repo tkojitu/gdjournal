@@ -15,3 +15,8 @@ function gdjournal() {
     document.body.removeChild(link);
     URL.revokeObjectURL(link.href);
 }
+
+function clearTextarea() {
+	let text = document.getElementById("textarea");
+	text.value = "";
+}
