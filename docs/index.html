@@ -6,8 +6,7 @@
   display: flex;
 }
 #left_panel {
-  width: 50%;
-  text-align: left;
+  width: calc(100% - 55%);
 }
 #right_panel {
   width: 50%;
@@ -25,24 +24,14 @@
   height: 960px;
   overflow: scroll;
 }
-.flex {
-  display: flex;
-}
-.right {
-  width: 50%;
-  text-align: right;
-}
-.left {
-  width: calc(100% - 55%);
-}
 </style>
 <meta charset="UTF-8">
 <script src="./scripts/main.js"></script>
 </head>
-<body id="body">
-<div class="flex">
-  <div class="left"><button onclick="gdjournal()" id="download_button">Download</button></div>
-  <div class="right"><button onclick="clearTextarea()" id="clear_button">Clear</button></div>
+<body>
+<div id="control_panel">
+  <div id="left_panel"><button onclick="gdjournal()" id="download_button">Download</button></div>
+  <div id="right_panel"><button onclick="clearTextarea()" id="clear_button">Clear</button></div>
 </div>
 <p><textarea id="textarea"></textarea></p>
 </body>
